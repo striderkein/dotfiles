@@ -113,6 +113,7 @@
 # alias ll='ls -l'                              # long list
 # alias la='ls -A'                              # all but . and ..
 # alias l='ls -CF'                              #
+alias ls='ls -la'
 
 # Umask
 #
