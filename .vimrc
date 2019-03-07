@@ -22,7 +22,7 @@ set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 set softtabstop=4
 
-" $B8!:w;~%G%U%)%k%H$G(Bvery magic
-"nnoremap / /\v
-" Ctrl+A$B$GA4J8A*Br(B
+" 検索を必ずvery magicにする
+nnoremap / /\v
+" Ctrl+Aで全文選択する
 nnoremap <C-a> ggVG
