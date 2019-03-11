@@ -209,8 +209,6 @@ alias nslookup="cocot nslookup"
 alias traceroute="cocot tracert"
 alias route="cocot route" 
 alias netstat="cocot netstat"
-# ls を便利に
-alias ls='ls --show-control-chars --color -F'
 # cygstart:Windowsでのデフォルト起動プログラムで、指定されたファイルを実行できるコマンド
 alias cs="cygstart"
 alias mysql="mysql --protocol=TCP -u root -p"
