@@ -18,7 +18,6 @@ set tabstop=2
 " 行頭のTab文字の表示幅（スペースいくつ分）
 set shiftwidth=2
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 set softtabstop=4
 

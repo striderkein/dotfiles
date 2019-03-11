@@ -201,16 +201,6 @@ alias ls='ls -la'
 #export OUTPUT_CHARSET=sjis
 # 文字化け対策
 export LANG=ja_JP.utf8
-# 文字化け対策:windowsアプリケーション起動用
-alias ifconfig="cocot ipconfig"
-alias ping="cocot ping" 
-alias arp="cocot arp"
-alias nslookup="cocot nslookup"
-alias traceroute="cocot tracert"
-alias route="cocot route" 
-alias netstat="cocot netstat"
-# cygstart:Windowsでのデフォルト起動プログラムで、指定されたファイルを実行できるコマンド
-alias cs="cygstart"
 alias mysql="mysql --protocol=TCP -u root -p"
 
 PATH=${PATH}:/usr/local/bin ; export PATH
