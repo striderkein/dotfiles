@@ -205,7 +205,6 @@ alias pwcl='pwd | pbcopy'
 #export OUTPUT_CHARSET=sjis
 # 文字化け対策
 export LANG=ja_JP.UTF-8
-alias mysql="mysql --protocol=TCP -u root -p"
 
 PATH=${PATH}:/usr/local/bin ; export PATH
 MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
