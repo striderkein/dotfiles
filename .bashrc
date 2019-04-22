@@ -67,12 +67,15 @@
 #
 # Don't put duplicate lines in the history.
 # export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+export HISTCONTROL=ignoreboth
 #
 # Ignore some controlling instructions
 # HISTIGNORE is a colon-delimited list of patterns which should be excluded.
 # The '&' is a special pattern which suppresses duplicate entries.
 # export HISTIGNORE=$'[ \t]*:&:[fb]g:exit'
 # export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
+export HISTIGNORE='&:[ \t]*:fg*:bg*:history*:pwd:exit:ls:cd*'
+export HISTSIZE=10000
 #
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
@@ -114,6 +117,7 @@
 # alias la='ls -A'                              # all but . and ..
 # alias l='ls -CF'                              #
 alias ls='ls -la'
+alias pwcl='pwd | pbcopy'
 
 # Umask
 #
@@ -200,7 +204,7 @@ alias ls='ls -la'
 #export JLESSCHARSET=japanese-sjis 
 #export OUTPUT_CHARSET=sjis
 # 文字化け対策
-export LANG=ja_JP.utf8
+#export LANG=ja_JP.UTF-8
 alias mysql="mysql --protocol=TCP -u root -p"
 
 PATH=${PATH}:/usr/local/bin ; export PATH
