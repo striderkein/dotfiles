@@ -1,5 +1,5 @@
 "-------Format--------
-""自動インデントを有効化する
+" 自動インデントを有効化する
 set smartindent
 set autoindent
 
