@@ -25,3 +25,7 @@ set softtabstop=4
 nnoremap / /\v
 " Ctrl+Aで全文選択する
 nnoremap <C-a> ggVG
+" スペースキー2回押下でカーソル下の単語をハイライトする
+nnoremap <silent> <Space><Space> "zyiw:let @/ = '\<' . @z . '\>'<CR>:set hlsearch<CR>
+" カーソル下の単語をハイライトしてから置換する
+nmap # <Space><Space>:%s/<C-r>///g<Left><Left>
