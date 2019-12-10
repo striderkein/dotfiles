@@ -215,3 +215,8 @@ MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 #alias renamer='renamer'
 #function renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
 renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
+
+# for SVN
+export SVN_EDITOR=vi
+alias svnl='svnl'
+function svnl() { svn log -v -l $1; }
