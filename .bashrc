@@ -220,3 +220,23 @@ renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
 export SVN_EDITOR=vi
 alias svnl='svnl'
 function svnl() { svn log -v -l $1; }
+
+# for Docker
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dcs='docker-compose stop'
+
+dcup() {
+  case $1 in
+    # for AeonForest
+    "af") docker-compose up -d --build apache2 workspace ;;
+    # for Okamoto
+    "ok") docker-compose up -d --build apache2 mysql workspace ;;
+    # for canopus
+    "ca") docker-compose up -d --build apache2 mysql workspace ;;
+    # for element
+    "el") docker-compose up -d ;;
+    # others
+    *) echo "please give the params af, ok, ca " ;;
+  esac
+}
