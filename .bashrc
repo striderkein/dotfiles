@@ -206,5 +206,5 @@ alias pwcl='pwd | pbcopy'
 # 文字化け対策
 export LANG=ja_JP.UTF-8
 
-PATH=${PATH}:/usr/local/bin ; export PATH
+# PATH=/usr/local/bin:${PATH} ; export PATH
 MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
