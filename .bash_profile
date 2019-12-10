@@ -43,3 +43,6 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+# switch profiles according to connection destination
+# If something goes wrong, delete the line below and do `source ~/.bash_profile`.
+alias ssh='~/bin/ssh-change-profile.sh'
