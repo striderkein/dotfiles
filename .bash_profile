@@ -42,3 +42,4 @@ fi
 # if [ -d "${HOME}/info" ]; then
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
+export PATH=$HOME/.nodebrew/current/bin:$PATH
