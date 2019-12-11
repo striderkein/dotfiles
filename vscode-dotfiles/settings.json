@@ -1,0 +1,32 @@
+{
+		"breadcrumbs.enabled": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "vscodeWorkspaceSwitcher.paths": [
+        "~/code-workspace"
+    ],
+    "files.autoSave": "off",
+    "files.hotExit": "onExitAndWindowClose",
+    "files.autoGuessEncoding": true,
+    "terminal.integrated.fontFamily": "'SFMono-Square', menlo, monospace",
+		"editor.fontFamily": "'SFMono-Square', Menlo, Monaco, 'Courier New', monospaceth",
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "editor.tabSize": 2,
+		"terminal.external.osxExec": "iTerm.app",
+		"vim.hlsearch": true,
+		"emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.variables": {
+				"lang": "ja"
+    },
+    "workbench.colorTheme": "Solarized Dark",
+    "explorer.confirmDelete": false,
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.rendererType": "dom"
+}
