@@ -1,8 +1,8 @@
 [core]
 	excludesfile = /Users/shirow/.gitignore_global
 [user]
-	name = Shirow Ozawa
-	email = shirow.ozawa@mulodo.com
+	name = shirow ozawa
+	email = striderkein@gmail.com
 [alias]
   b  = branch
 	st = status
