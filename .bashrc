@@ -76,6 +76,8 @@ export HISTCONTROL=ignoreboth
 # export HISTIGNORE=$'[ \t]*:&:[fb]g:exit:ls' # Ignore the ls command as well
 export HISTIGNORE='&:[ \t]*:fg*:bg*:history*:pwd:exit:ls:cd*'
 export HISTSIZE=10000
+# history にコマンド実行時刻を記録する
+HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 #
 # Whenever displaying the prompt, write the previous line to disk
 # export PROMPT_COMMAND="history -a"
