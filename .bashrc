@@ -231,6 +231,16 @@ gcd() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
 
+# カレントブランチから$1ブランチへのPullRequestを開く
+# cf. https://kang.hateblo.jp/entry/2018/12/01/133651
+function opr() {
+  parentBranch=$1
+  currentBranch=`git branch | grep "*"`
+  repoName=$(git remote show origin -n | ruby -ne 'puts /^\s*Fetch.*:(.*).git/.match($_)[1] rescue nil')
+
+  open -a /Applications/Google\ Chrome.app  https://github.com/${repoName/* /}/compare/${parentBranch/* /}...${currentBranch/* /}
+}
+
 # for SVN
 export SVN_EDITOR=vi
 alias svnl='svnl'
