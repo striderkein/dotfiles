@@ -249,20 +249,21 @@ function svnl() { svn log -v -l $1; }
 # for Docker
 alias fig='docker-compose'
 
-dcup() {
-  case $1 in
-    # for AeonForest
-    "af") docker-compose up -d --build apache2 workspace ;;
-    # for Okamoto
-    "ok") docker-compose up -d --build apache2 mysql workspace ;;
-    # for canopus
-    "ca") docker-compose up -d --build apache2 mysql workspace ;;
-    # for element
-    "el") docker-compose up -d ;;
-    # others
-    *) echo "please give the params af, ok, ca " ;;
-  esac
-}
+# example of case statement
+# dcup() {
+#   case $1 in
+#     # for AeonForest
+#     "af") docker-compose up -d --build apache2 workspace ;;
+#     # for Okamoto
+#     "ok") docker-compose up -d --build apache2 mysql workspace ;;
+#     # for canopus
+#     "ca") docker-compose up -d --build apache2 mysql workspace ;;
+#     # for element
+#     "el") docker-compose up -d ;;
+#     # others
+#     *) echo "please give the params af, ok, ca " ;;
+#   esac
+# }
 
 #for bash_completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
