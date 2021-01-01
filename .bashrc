@@ -202,10 +202,6 @@ alias pwcl='pwd | pbcopy'
 # }
 # 
 # alias cd=cd_func
-#export LANG=ja_JP.SJIS
-#export JLESSCHARSET=japanese-sjis 
-#export OUTPUT_CHARSET=sjis
-# 文字化け対策
 export LANG=ja_JP.UTF-8
 
 # PATH=/usr/local/bin:${PATH} ; export PATH
