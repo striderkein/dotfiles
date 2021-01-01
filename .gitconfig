@@ -25,3 +25,8 @@
   # usage: git delete-merged-branch <branch_name>
   # ex. usage: git delete-merged-branch develop
   delete-merged-branch = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
