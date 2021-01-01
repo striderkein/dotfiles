@@ -21,8 +21,6 @@ set encoding=utf-8
 set fileformats=unix,dos,mac
 set softtabstop=4
 
-" 検索を必ずvery magicにする
-nnoremap / /\v
 " Ctrl+Aで全文選択する
 nnoremap <C-a> ggVG
 " スペースキー2回押下でカーソル下の単語をハイライトする
