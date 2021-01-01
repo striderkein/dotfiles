@@ -212,6 +212,12 @@ MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 # thx: https://qiita.com/shuhei/items/cf1ddf373d1f83d5d667
 renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
 
+# for Git/GitHub
+# cf. https://neos21.hatenablog.com/entry/2018/07/19/080000
+gcd() {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
+
 # for SVN
 export SVN_EDITOR=vi
 alias svnl='svnl'
