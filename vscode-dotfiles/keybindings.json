@@ -74,6 +74,14 @@
         "command": "workbench.action.toggleMaximizedPanel"
     },
     {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "cmd+shift+k",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
         "key": "alt+cmd+=",
         "command": "editor.action.fontZoomIn"
     },
