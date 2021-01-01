@@ -9,6 +9,7 @@
 	st = status
 	co = checkout
 	cm = commit
+	cp = cherry-pick
   # staged diff
   diffs = diff --cached
   # view aliases list
