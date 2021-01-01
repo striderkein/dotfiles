@@ -265,7 +265,14 @@ alias fig='docker-compose'
 #   esac
 # }
 
-#for bash_completion
+# for bash-completion
+# bash-completion Op.1
+# If use below setting, must install `bash-completion` via Homebrew
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion
 fi
+# bash-completion Op.2
+# If use below setting, must install `git` via Homebrew
+# source /usr/local/etc/bash_completion.d/git-prompt.sh
+# source /usr/local/etc/bash_completion.d/git-completion.bash
+
