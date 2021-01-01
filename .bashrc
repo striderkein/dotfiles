@@ -201,6 +201,19 @@ alias pwcl='pwd | pbcopy'
 #   return 0
 # }
 # 
+
+# change prompt format
+
+# for bash
+# \u -> current user
+# @  -> そのまま'@'として表示
+# \h -> hostname
+# \W -> working directory
+# export PS1="[\u@\h \W]\$ "
+
+# for zsh
+# export PS1="%n@%h %W %% "
+
 # alias cd=cd_func
 export LANG=ja_JP.UTF-8
 
