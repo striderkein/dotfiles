@@ -210,8 +210,6 @@ MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 # general perpose
 # rename arg1 to arg2 recursively
 # thx: https://qiita.com/shuhei/items/cf1ddf373d1f83d5d667
-#alias renamer='renamer'
-#function renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
 renamer() { find . -name "*$1*" | xargs rename -s $1 $2; }
 
 # for SVN
