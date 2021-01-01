@@ -247,9 +247,7 @@ alias svnl='svnl'
 function svnl() { svn log -v -l $1; }
 
 # for Docker
-alias dc='docker-compose'
-alias dcu='docker-compose up'
-alias dcs='docker-compose stop'
+alias fig='docker-compose'
 
 dcup() {
   case $1 in
