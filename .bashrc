@@ -204,7 +204,7 @@ alias pwcl='pwd | pbcopy'
 export LANG=ja_JP.UTF-8
 
 # PATH=/usr/local/bin:${PATH} ; export PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3.9/libexec/bin:$HOME/.nodebrew/current/bin:$PATH
 MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 
 # general perpose
