@@ -1,13 +1,14 @@
 #!/bin/sh
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+ln -sf $SCRIPT_DIR/.vimrc ~/.vimrc
 
 # detect bash | zsh
 if [ -n "${BASH_VERSION-}" ]; then
-  ln -sf ~/dotfiles/.profile ~/.bash_profile
-  ln -sf ~/dotfiles/.rc ~/.bashrc
+  ln -sf $SCRIPT_DIR/.profile ~/.profile
+  ln -sf $SCRIPT_DIR/.rc ~/.bashrc
 elif [ -n "${ZSH_VERSION-}" ]; then
-  ln -sf ~/dotfiles/.profile ~/.zprofile
-  ln -sf ~/dotfiles/.rc ~/.zshrc
+  ln -sf $SCRIPT_DIR/.profile ~/.zprofile
+  ln -sf $SCRIPT_DIR/.rc ~/.zshrc
 # elif [ -n "${RANDOM-}" ]; then
 #   # case: other
 # else
@@ -15,6 +16,6 @@ elif [ -n "${ZSH_VERSION-}" ]; then
 fi
 
 # Git settings
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/.gitattributes ~/.gitattributes
-ln -sf ~/dotfiles/.gitignore ~/.gitignore
+ln -sf $SCRIPT_DIR/.gitconfig ~/.gitconfig
+ln -sf $SCRIPT_DIR/.gitattributes ~/.gitattributes
+ln -sf $SCRIPT_DIR/.gitignore ~/.gitignore
