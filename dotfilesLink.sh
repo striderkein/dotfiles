@@ -3,11 +3,11 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 
 # detect bash | zsh
 if [ -n "${BASH_VERSION-}" ]; then
-  ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
-  ln -sf ~/dotfiles/.bashrc ~/.bashrc
+  ln -sf ~/dotfiles/.profile ~/.bash_profile
+  ln -sf ~/dotfiles/.rc ~/.bashrc
 elif [ -n "${ZSH_VERSION-}" ]; then
-  ln -sf ~/dotfiles/.bash_profile ~/.zprofile
-  ln -sf ~/dotfiles/.bashrc ~/.zshrc
+  ln -sf ~/dotfiles/.profile ~/.zprofile
+  ln -sf ~/dotfiles/.rc ~/.zshrc
 # elif [ -n "${RANDOM-}" ]; then
 #   # case: other
 # else
