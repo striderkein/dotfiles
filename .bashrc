@@ -51,25 +51,10 @@
 # Any completions you add in ~/.bash_completion are sourced last.
 # [[ -f /etc/bash_completion ]] && . /etc/bash_completion
 
-# History Options
-#
-# Don't put duplicate lines in the history.
-# export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
-export HISTCONTROL=ignoreboth
-#
-# Ignore some controlling instructions
-# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
-# The '&' is a special pattern which suppresses duplicate entries.
-export HISTIGNORE='&:[ \t]*:fg*:bg*:history*:pwd:exit:ls:cd*'
-export HISTSIZE=10000
-# history にコマンド実行時刻を記録する
-HISTTIMEFORMAT='%Y-%m-%dT%T%z '
-#
-# Whenever displaying the prompt, write the previous line to disk
-# export PROMPT_COMMAND="history -a"
-
 # Aliases
 #
+# switch profiles according to connection destination
+alias ssh='~/bin/ssh-change-profile.sh'
 # Some people use a different file for aliases
 # if [ -f "${HOME}/.bash_aliases" ]; then
 #   source "${HOME}/.bash_aliases"
@@ -106,6 +91,11 @@ HISTTIMEFORMAT='%Y-%m-%dT%T%z '
 # alias l='ls -CF'                              #
 alias ls='ls -la'
 alias pwcl='pwd | pbcopy'
+# for SVN
+alias svnl='svnl'
+function svnl() { svn log -v -l $1; }
+# for Docker
+alias fig='docker-compose'
 
 # Umask
 #
@@ -198,14 +188,8 @@ alias pwcl='pwd | pbcopy'
 # export PS1="[\u@\h \W]\$ "
 
 # for zsh
-# export PS1="%n@%h %W %% "
-
-# alias cd=cd_func
-export LANG=ja_JP.UTF-8
-
-# PATH=/usr/local/bin:${PATH} ; export PATH
-export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3.9/libexec/bin:$HOME/.nodebrew/current/bin:$PATH
-MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
+export PROMPT="%n@%m $ "
+export RPROMPT="[%~]"
 
 # general perpose
 # rename arg1 to arg2 recursively
@@ -227,14 +211,6 @@ function opr() {
 
   open -a /Applications/Google\ Chrome.app  https://github.com/${repoName/* /}/compare/${parentBranch/* /}...${currentBranch/* /}
 }
-
-# for SVN
-export SVN_EDITOR=vi
-alias svnl='svnl'
-function svnl() { svn log -v -l $1; }
-
-# for Docker
-alias fig='docker-compose'
 
 # example of case statement
 # dcup() {
