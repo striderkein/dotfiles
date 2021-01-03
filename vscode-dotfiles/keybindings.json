@@ -57,7 +57,7 @@
     {
         "key": "cmd+k cmd+k",
         "command": "bookmarks.toggle",
-        "when": "editorTextFocus && editorLangId != 'json'"
+        "when": "editorTextFocus"
     },
     {
         "key": "alt+cmd+k",
@@ -72,6 +72,14 @@
     {
         "key": "ctrl+shift+x",
         "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "cmd+shift+j",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "cmd+shift+k",
+        "command": "workbench.action.terminal.focusPrevious"
     },
     {
         "key": "alt+cmd+=",

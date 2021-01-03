@@ -1,37 +1,42 @@
-# To the extent possible under law, the author(s) have dedicated all 
-# copyright and related and neighboring rights to this software to the 
-# public domain worldwide. This software is distributed without any warranty. 
-# You should have received a copy of the CC0 Public Domain Dedication along 
-# with this software. 
-# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
+# if [ -f "${HOME}/.bashrc" ] ; then
+#   source "${HOME}/.bashrc"
+# fi
 
-# base-files version 4.2-3
+# Set PATH so it includes user's private bin if it exists
+# if [ -d "${HOME}/bin" ] ; then
+#   PATH="${HOME}/bin:${PATH}"
+# fi
+export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3.9/libexec/bin:$HOME/.nodebrew/current/bin:$PATH
 
-# ~/.profile: executed by the command interpreter for login shells.
+# Set MANPATH so it includes users' private man if it exists
+# if [ -d "${HOME}/man" ]; then
+#   MANPATH="${HOME}/man:${MANPATH}"
+# fi
+MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 
-# The latest version as installed by the Cygwin Setup program can
-# always be found at /etc/defaults/etc/skel/.profile
+# Set INFOPATH so it includes users' private info if it exists
+# if [ -d "${HOME}/info" ]; then
+#   INFOPATH="${HOME}/info:${INFOPATH}"
+# fi
 
-# Modifying /etc/skel/.profile directly will prevent
-# setup from updating it.
+export LANG=ja_JP.UTF-8
 
-# The copy in your home directory (~/.profile) is yours, please
-# feel free to customise it to create a shell
-# environment to your liking.  If you feel a change
-# would be benificial to all, please feel free to send
-# a patch to the cygwin mailing list.
-
-# User dependent .profile file
-
-# Set user-defined locale
-export LANG=$(locale -uU)
-
-# This file is not read by bash(1) if ~/.bash_profile or ~/.bash_login
-# exists.
+# History Options
 #
-# if running bash
-if [ -n "${BASH_VERSION}" ]; then
-  if [ -f "${HOME}/.bashrc" ]; then
-    source "${HOME}/.bashrc"
-  fi
-fi
+# Don't put duplicate lines in the history.
+# export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
+export HISTCONTROL=ignoreboth
+#
+# Ignore some controlling instructions
+# HISTIGNORE is a colon-delimited list of patterns which should be excluded.
+# The '&' is a special pattern which suppresses duplicate entries.
+export HISTIGNORE='&:[ \t]*:fg*:bg*:history*:pwd:exit:ls:cd*'
+export HISTSIZE=10000
+# history にコマンド実行時刻を記録する
+HISTTIMEFORMAT='%Y-%m-%dT%T%z '
+#
+# Whenever displaying the prompt, write the previous line to disk
+# export PROMPT_COMMAND="history -a"
+
+# for SVN
+export SVN_EDITOR=vi
