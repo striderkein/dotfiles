@@ -188,7 +188,7 @@ alias fig='docker-compose'
 # export PS1="[\u@\h \W]\$ "
 
 # for zsh
-export PROMPT="%n@%m $ "
+export PROMPT="%n@%m %% "
 export RPROMPT="[%~]"
 
 # general perpose
