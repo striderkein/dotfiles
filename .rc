@@ -54,7 +54,7 @@
 # Aliases
 #
 # switch profiles according to connection destination
-alias ssh='~/bin/ssh-change-profile.sh'
+# alias ssh='~/bin/ssh-change-profile.sh'
 # Some people use a different file for aliases
 # if [ -f "${HOME}/.bash_aliases" ]; then
 #   source "${HOME}/.bash_aliases"
@@ -96,7 +96,9 @@ alias svnl='svnl'
 function svnl() { svn log -v -l $1; }
 # for Docker
 alias fig='docker-compose'
-
+# node.js
+alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
+function nodekill() { kill -9 $1; }
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
@@ -239,3 +241,22 @@ fi
 # source /usr/local/etc/bash_completion.d/git-prompt.sh
 # source /usr/local/etc/bash_completion.d/git-completion.bash
 
+export HOMEBREW_CACHE=/opt/homebrew/cache
+
+# git-promptの読み込み
+source ~/.zsh/git-prompt.sh
+
+# git-completionの読み込み
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
+# プロンプトのオプション表示設定
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+# プロンプトの表示設定(好きなようにカスタマイズ可)
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+\$ '
