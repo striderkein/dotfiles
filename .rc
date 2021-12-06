@@ -96,7 +96,9 @@ alias svnl='svnl'
 function svnl() { svn log -v -l $1; }
 # for Docker
 alias fig='docker-compose'
-
+# node.js
+alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
+function nodekill() { kill -9 $1; }
 # Umask
 #
 # /etc/profile sets 022, removing write perms to group + others.
