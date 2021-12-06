@@ -241,3 +241,8 @@ fi
 # source /usr/local/etc/bash_completion.d/git-prompt.sh
 # source /usr/local/etc/bash_completion.d/git-completion.bash
 
+# git-completionの読み込み
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
