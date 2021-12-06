@@ -54,7 +54,7 @@
 # Aliases
 #
 # switch profiles according to connection destination
-alias ssh='~/bin/ssh-change-profile.sh'
+# alias ssh='~/bin/ssh-change-profile.sh'
 # Some people use a different file for aliases
 # if [ -f "${HOME}/.bash_aliases" ]; then
 #   source "${HOME}/.bash_aliases"
