@@ -12,9 +12,6 @@
 #
 alias ls='ls -la'
 alias pwcl='pwd | pbcopy'
-# for SVN
-alias svnl='svnl'
-function svnl() { svn log -v -l $1; }
 # for Docker
 alias fig='docker-compose'
 # node.js
