@@ -55,8 +55,6 @@ function opr() {
   open -a /Applications/Google\ Chrome.app  https://github.com/${repoName/* /}/compare/${parentBranch/* /}...${currentBranch/* /}
 }
 
-# export HOMEBREW_CACHE=/opt/homebrew/cache
-
 # git-promptの読み込み
 source ~/.zsh/git-prompt.sh
 

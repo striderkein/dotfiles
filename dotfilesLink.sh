@@ -5,10 +5,10 @@ ln -sf $SCRIPT_DIR/.vimrc ~/.vimrc
 # detect bash | zsh
 if [ -n "${BASH_VERSION-}" ]; then
   ln -sf $SCRIPT_DIR/.profile ~/.profile
-  ln -sf $SCRIPT_DIR/.rc ~/.bashrc
+  ln -sf $SCRIPT_DIR/.bashrc ~/.bashrc
 elif [ -n "${ZSH_VERSION-}" ]; then
   ln -sf $SCRIPT_DIR/.profile ~/.zprofile
-  ln -sf $SCRIPT_DIR/.rc ~/.zshrc
+  ln -sf $SCRIPT_DIR/.zshrc ~/.zshrc
 # elif [ -n "${RANDOM-}" ]; then
 #   # case: other
 # else
