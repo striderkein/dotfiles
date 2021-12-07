@@ -30,13 +30,6 @@ function nodekill() { kill -9 $1; }
 #
 
 # change prompt format
-# for bash
-# \u -> current user
-# @  -> そのまま'@'として表示
-# \h -> hostname
-# \W -> working directory
-# export PS1="[\u@\h \W]\$ "
-
 # for zsh
 # PROMPT="%n@%m %% "
 # RPROMPT="[%~]"
