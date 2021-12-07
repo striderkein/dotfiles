@@ -35,11 +35,7 @@ function nodekill() { kill -9 $1; }
 # @  -> そのまま'@'として表示
 # \h -> hostname
 # \W -> working directory
-# export PS1="[\u@\h \W]\$ "
-
-# for zsh
-export PROMPT="%n@%m %% "
-export RPROMPT="[%~]"
+export PS1="[\u@\h \W]\$ "
 
 # general perpose
 # rename arg1 to arg2 recursively
