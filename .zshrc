@@ -38,8 +38,8 @@ function nodekill() { kill -9 $1; }
 # export PS1="[\u@\h \W]\$ "
 
 # for zsh
-export PROMPT="%n@%m %% "
-export RPROMPT="[%~]"
+PROMPT="%n@%m %% "
+RPROMPT="[%~]"
 
 # general perpose
 # rename arg1 to arg2 recursively
