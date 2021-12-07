@@ -19,6 +19,8 @@ MANPATH=${MANPATH:-}:/usr/local/man ; export MANPATH
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
+export HOMEBREW_CACHE=/opt/homebrew/cache
+
 export LANG=ja_JP.UTF-8
 
 # History Options
