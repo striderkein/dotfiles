@@ -11,10 +11,3 @@ fi
 export PATH=/opt/homebrew/bin:/opt/homebrew/opt/python@3.9/libexec/bin:$HOME/.nodebrew/current/bin:$PATH
 
 export HOMEBREW_CACHE=/opt/homebrew/cache
-
-export LANG=ja_JP.UTF-8
-
-export HISTCONTROL=ignoreboth
-export HISTIGNORE='&:[ \t]*:fg*:bg*:history*:pwd:exit:ls:cd*'
-export HISTSIZE=10000
-HISTTIMEFORMAT='%Y-%m-%dT%T%z '
