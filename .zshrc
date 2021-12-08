@@ -3,13 +3,6 @@
 
 . ./.commons/.functions
 
-# Functions
-#
-# Some people use a different file for functions
-# if [ -f "${HOME}/.bash_functions" ]; then
-#   source "${HOME}/.bash_functions"
-# fi
-#
 read_dotfiles_source .rc.common
 
 # 履歴にフォーマットを反映させるには t オプションおよび書式指定が必要なのでエイリアスを設定しておく
