@@ -1,22 +1,6 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-# Aliases
-#
-# switch profiles according to connection destination
-# alias ssh='~/bin/ssh-change-profile.sh'
-# Some people use a different file for aliases
-# if [ -f "${HOME}/.bash_aliases" ]; then
-#   source "${HOME}/.bash_aliases"
-# fi
-#
-alias ls='ls -la'
-alias pwcl='pwd | pbcopy'
-# for Docker
-alias fig='docker-compose'
-# node.js
-alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
-function nodekill() { kill -9 $1; }
 
 # Functions
 #

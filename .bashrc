@@ -1,13 +1,6 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-alias ls='ls -la'
-alias pwcl='pwd | pbcopy'
-# for Docker
-alias fig='docker-compose'
-# node.js
-alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
-function nodekill() { kill -9 $1; }
 
 
 # change prompt format
