@@ -1,5 +1,4 @@
 alias ls='ls -la'
-alias pwcl='pwd | pbcopy'
 alias fig='docker-compose'
 # node.js
 alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
