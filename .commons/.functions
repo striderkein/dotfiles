@@ -18,32 +18,3 @@ opr() {
 
   open -a /Applications/Google\ Chrome.app  https://github.com/${repoName/* /}/compare/${parentBranch/* /}...${currentBranch/* /}
 }
-
-is_bash() {
-  if [ -n "${BASH_VERSION-}" ]; then
-    true
-  else
-    false
-  fi
-}
-
-read_source() {
-  local filepath=$1
-  if [ -z $filepath ]; then
-    return
-  fi
-
-  if [ -f $filepath ]; then
-      . $filepath
-  fi
-}
-
-read_dotfiles_source() {
-  local filepath=$1
-  if [ -z $filepath ]; then
-    return
-  fi
-
-  local dotfiles_dir=~/.dotfiles
-  read_source $dotfiles_dir/$filepath
-}
