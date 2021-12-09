@@ -17,5 +17,4 @@ fi
 
 # Git settings
 ln -sf $SCRIPT_DIR/.gitconfig ~/.gitconfig
-ln -sf $SCRIPT_DIR/.gitattributes ~/.gitattributes
 ln -sf $SCRIPT_DIR/.gitignore ~/.gitignore
