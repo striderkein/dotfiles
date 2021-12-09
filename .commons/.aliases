@@ -4,3 +4,5 @@ alias fig='docker-compose'
 # node.js
 alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
+# git
+alias chash='git rev-parse --short HEAD'
