@@ -1,6 +1,19 @@
 #!/bin/sh
 dir=$(cd $(dirname $0) && pwd)
 
+download_git_completion() {
+  curl -o git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+  curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+  curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
+}
+
+deploy_git_completion() {
+  mkdir -p ~/.zsh && cd $_
+  if [ ! -e git-prompt.sh ] && [ ! -e git-completion.sh ] && [ ! -e _git ]; then
+    download_git_completion
+  fi
+}
+
 create_homedir_symlink() {
   local basepath=$dir/$1
   if [ -z $basepath ]; then
@@ -39,3 +52,5 @@ do
   [[ "$file" == ".zshrc" ]] && continue
   create_homedir_symlink $file
 done
+
+deploy_git_completion
