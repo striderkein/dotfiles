@@ -43,14 +43,14 @@ else
   create_homedir_symlink .zshrc
 fi
 
-for file in .??*
+for dotfile in .??*
 do
-  [[ "$file" == ".git" ]] && continue
-  [[ "$file" == ".commons" ]] && continue
-  [[ "$file" == ".profile" ]] && continue
-  [[ "$file" == ".bashrc" ]] && continue
-  [[ "$file" == ".zshrc" ]] && continue
-  create_homedir_symlink $file
+  [[ "$dotfile" == ".git" ]] && continue
+  [[ "$dotfile" == ".commons" ]] && continue
+  [[ "$dotfile" == ".profile" ]] && continue
+  [[ "$dotfile" == ".bashrc" ]] && continue
+  [[ "$dotfile" == ".zshrc" ]] && continue
+  create_homedir_symlink $dotfile
 done
 
 deploy_git_completion
