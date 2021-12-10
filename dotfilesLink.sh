@@ -1,6 +1,17 @@
 #!/bin/sh
 dir=$(cd $(dirname $0) && pwd)
 
+# detect bash | zsh
+is_bash() {
+  if [ -n "${BASH_VERSION-}" ]; then
+    # bash
+    true
+  else
+    # not bash
+    false
+  fi
+}
+
 download_git_completion() {
   curl -o git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
   curl -o git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
@@ -35,7 +46,7 @@ create_homedir_symlink() {
 }
 
 install_dotfiles() {
-  if [ -n "${BASH_VERSION-}" ]; then
+  if is_bash; then
     create_homedir_symlink .profile .bash_profile
     create_homedir_symlink .bashrc
   else
