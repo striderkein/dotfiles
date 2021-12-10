@@ -34,23 +34,25 @@ create_homedir_symlink() {
   ln -sfnv $basepath $outpath
 }
 
-# detect bash | zsh
-if [ -n "${BASH_VERSION-}" ]; then
-  create_homedir_symlink .profile .bash_profile
-  create_homedir_symlink .bashrc
-else
-  create_homedir_symlink .profile .zprofile
-  create_homedir_symlink .zshrc
-fi
+install_dotfiles() {
+  if [ -n "${BASH_VERSION-}" ]; then
+    create_homedir_symlink .profile .bash_profile
+    create_homedir_symlink .bashrc
+  else
+    create_homedir_symlink .profile .zprofile
+    create_homedir_symlink .zshrc
+  fi
 
-for dotfile in .??*
-do
-  [[ "$dotfile" == ".git" ]] && continue
-  [[ "$dotfile" == ".commons" ]] && continue
-  [[ "$dotfile" == ".profile" ]] && continue
-  [[ "$dotfile" == ".bashrc" ]] && continue
-  [[ "$dotfile" == ".zshrc" ]] && continue
-  create_homedir_symlink $dotfile
-done
+  for dotfile in .??*
+  do
+    [[ "$dotfile" == ".git" ]] && continue
+    [[ "$dotfile" == ".commons" ]] && continue
+    [[ "$dotfile" == ".profile" ]] && continue
+    [[ "$dotfile" == ".bashrc" ]] && continue
+    [[ "$dotfile" == ".zshrc" ]] && continue
+    create_homedir_symlink $dotfile
+  done
+}
 
+install_dotfiles
 deploy_git_completion
