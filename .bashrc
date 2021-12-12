@@ -1,9 +1,8 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-. ./.commons/.functions
-
-read_dotfiles_source .rc.common
+. ~/dotfiles/.functions
+. ~/dotfiles/.rc.common
 
 # history control
 # 履歴ファイルの指定

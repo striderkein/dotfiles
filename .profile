@@ -1,4 +1,4 @@
-. ./.commons/.aliases
+. ${HOME}/dotfiles/.aliases
 
 if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"

@@ -57,7 +57,6 @@ install_dotfiles() {
   for dotfile in .??*
   do
     [[ "$dotfile" == ".git" ]] && continue
-    [[ "$dotfile" == ".commons" ]] && continue
     [[ "$dotfile" == ".profile" ]] && continue
     [[ "$dotfile" == ".bashrc" ]] && continue
     [[ "$dotfile" == ".zshrc" ]] && continue

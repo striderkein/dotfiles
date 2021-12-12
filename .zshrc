@@ -1,9 +1,8 @@
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
-. ./.commons/.functions
-
-read_dotfiles_source .rc.common
+. ~/dotfiles/.functions
+. ~/dotfiles/.rc.common
 
 # 履歴にフォーマットを反映させるには t オプションおよび書式指定が必要なのでエイリアスを設定しておく
 alias history='history -t %Y-%m-%dT%T%z '
