@@ -24,7 +24,7 @@
   # delete merged branch
   # usage: git delete-merged-branch <branch_name>
   # ex. usage: git delete-merged-branch develop
-  vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
+  vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|dev|master|main'|xargs git branch -d; };f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
