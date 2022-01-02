@@ -5,8 +5,9 @@
 	name = shirow ozawa
 	email = striderkein@users.noreply.github.com
 [alias]
+  git = hub
   b  = branch
-	st = status
+	s = status -sb
 	co = checkout
 	cm = commit
 	cp = cherry-pick
