@@ -12,6 +12,6 @@ git clone git@github.com:striderkein/dotfiles -b cygwin
 
 ## install
 ```
-./dotfilesLink.sh
+./bootstrap.sh
 ```
 

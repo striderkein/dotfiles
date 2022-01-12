@@ -5,8 +5,9 @@
 	name = shirow ozawa
 	email = striderkein@users.noreply.github.com
 [alias]
+  git = hub
   b  = branch
-	st = status
+	s = status -sb
 	co = checkout
 	cm = commit
 	cp = cherry-pick
@@ -24,7 +25,7 @@
   # delete merged branch
   # usage: git delete-merged-branch <branch_name>
   # ex. usage: git delete-merged-branch develop
-  delete-merged-branch = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
+  vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|dev|master|main'|xargs git branch -d; };f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
