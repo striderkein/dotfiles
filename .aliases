@@ -6,3 +6,9 @@ alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
 # git
 alias chash='git rev-parse --short HEAD'
+# Docker
+alias d='docker'
+alias di='docker images'
+alias dc='docker container'
+alias dp='docker ps'
+alias dv='docker volume'
