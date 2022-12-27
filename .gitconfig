@@ -30,6 +30,9 @@
   # usage: git delete-merged-branch <branch_name>
   # ex. usage: git delete-merged-branch develop
   vacuum = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|dev|master|main'|xargs git branch -d; };f"
+  # get hash of HEAD
+  chash = rev-parse --short HEAD
+  cb = rev-parse --abbrev-ref HEAD
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
