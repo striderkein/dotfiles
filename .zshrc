@@ -83,4 +83,8 @@ if [ -f '/Users/shirow/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shirow/g
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/shirow/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shirow/google-cloud-sdk/completion.zsh.inc'; fi
 
+# for switching architecture: https://zenn.dev/junjunjunk/articles/4b230519d87de4
+alias arm="exec arch -arch arm64e /bin/zsh --login"
+alias x64="exec arch -arch x86_64 /bin/zsh --login"
+
 eval "$(nodenv init -)"
