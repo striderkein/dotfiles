@@ -11,6 +11,10 @@
 	co = checkout
 	cm = commit
 	cp = cherry-pick
+  ss = stash
+  sp = stash pop
+  sl = stash list
+  smu = submodule update
   # staged diff
   diffs = diff --cached
   # view aliases list
