@@ -1,3 +1,4 @@
+alias cl='clear'
 alias ls='ls -la'
 alias fig='docker-compose'
 # node.js
