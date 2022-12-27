@@ -47,3 +47,38 @@ PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
 # for anyenv
 eval "$(anyenv init -)"
 
+# for Zehitomo
+## from z-api
+function kms-encrypt() {
+  PROD_KEY=$(aws kms describe-key --key-id 'alias/z-sops-prod' --output text --query KeyMetadata.Arn)
+  PRE_PROD_KEY=$(aws kms describe-key --key-id 'alias/z-sops-pre-prod' --output text --query KeyMetadata.Arn)
+  for e in "$@"; do
+    if [ `echo $e | grep 'prod'` ] ; then
+      KEY_ID=$PROD_KEY
+    else
+      KEY_ID=$PRE_PROD_KEY
+    fi
+    sops --kms ${KEY_ID} -e ci/env_vars/.${e}.env > ci/env_vars/${e}.enc.env
+    echo "$e Done!"
+  done
+}
+
+function kms-decrypt() {
+  PROD_KEY=$(aws kms describe-key --key-id 'alias/z-sops-prod' --output text --query KeyMetadata.Arn)
+  PRE_PROD_KEY=$(aws kms describe-key --key-id 'alias/z-sops-pre-prod' --output text --query KeyMetadata.Arn)
+  for e in "$@"; do
+    if [ `echo $e | grep 'prod'` ] ; then
+      KEY_ID=$PROD_KEY
+    else
+      KEY_ID=$PRE_PROD_KEY
+    fi
+    sops --kms ${KEY_ID} -d ci/env_vars/${e}.enc.env > ci/env_vars/.${e}.env
+    echo "$e Done!"
+  done
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shirow/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shirow/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shirow/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shirow/google-cloud-sdk/completion.zsh.inc'; fi
