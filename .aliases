@@ -1,3 +1,4 @@
+alias cl='clear'
 alias ls='ls -la'
 alias fig='docker-compose'
 # node.js
@@ -5,3 +6,29 @@ alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
 # git
 alias chash='git rev-parse --short HEAD'
+# Docker
+alias d='docker'
+alias di='docker images'
+alias dc='docker container'
+alias dp='docker ps'
+alias dv='docker volume'
+dcnt_id() {
+  # $1 is must be CONTAINER_NAME
+  docker ps -a | grep $1 | awk '{print $1}'
+}
+dimg_id() {
+  # $1 is must be IMAGE_NAME
+  docker images | grep $1 | awk '{print $3}'
+}
+
+# Google Drive
+alias gds='cd ~/Library/CloudStorage/GoogleDrive-striderkein@gmail.com'
+
+# VSCode
+install_vsc_ext() {
+  if [ $# = 0 ]; then
+    echo argument 'extension-ID' required.
+  else
+    code --install-extension $1
+  fi
+}

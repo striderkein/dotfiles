@@ -44,6 +44,8 @@ setopt PROMPT_SUBST
 PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
 \$ '
 
-# for anyenv
-eval "$(anyenv init -)"
+# for switching architecture: https://zenn.dev/junjunjunk/articles/4b230519d87de4
+alias arm="exec arch -arch arm64e /bin/zsh --login"
+alias x64="exec arch -arch x86_64 /bin/zsh --login"
 
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
