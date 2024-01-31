@@ -88,5 +88,10 @@
     {
         "key": "alt+cmd+-",
         "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "-workbench.action.terminal.killInstance",
+        "when": "terminalHasBeenCreated && terminalTabsFocus || terminalIsOpen && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
     }
 ]
