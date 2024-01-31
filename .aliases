@@ -12,3 +12,6 @@ alias di='docker images'
 alias dc='docker container'
 alias dp='docker ps'
 alias dv='docker volume'
+
+# Google Drive
+alias gds='cd ~/Library/CloudStorage/GoogleDrive-striderkein@gmail.com'
