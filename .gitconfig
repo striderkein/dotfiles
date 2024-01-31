@@ -33,6 +33,7 @@
   # get hash of HEAD
   chash = rev-parse --short HEAD
   cb = rev-parse --abbrev-ref HEAD
+  push-f = push --force-with-lease
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
