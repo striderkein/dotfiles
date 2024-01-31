@@ -23,3 +23,12 @@ dimg_id() {
 
 # Google Drive
 alias gds='cd ~/Library/CloudStorage/GoogleDrive-striderkein@gmail.com'
+
+# VSCode
+install_vsc_ext() {
+  if [ $# = 0 ]; then
+    echo argument 'extension-ID' required.
+  else
+    code --install-extension $1
+  fi
+}
