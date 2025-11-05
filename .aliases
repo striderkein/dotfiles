@@ -1,6 +1,5 @@
 alias cl='clear'
 alias ls='ls -la'
-alias fig='docker-compose'
 # node.js
 alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
@@ -8,6 +7,7 @@ alias nodekill='kill -9 $1'
 alias chash='git rev-parse --short HEAD'
 # Docker
 alias d='docker'
+alias fig='docker compose'
 alias di='docker images'
 alias dc='docker container'
 alias dp='docker ps'
