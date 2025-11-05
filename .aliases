@@ -5,6 +5,15 @@ alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
 # git
 alias chash='git rev-parse --short HEAD'
+# Git のコミット履歴からある期間のコミット行数を表示する関数
+git_stats() {
+    local since_date="$1"
+    local until_date="$2"
+    local author="${3:-shirow.ozawa}"  # 引数が渡されていなければデフォルト値を使用
+
+    git log --numstat --pretty="%H" --author="$author" --since="$since_date" --until="$until_date" --no-merges | \
+    awk 'NF==3 {plus+=$1; minus+=$2} END {printf("%d (+%d, -%d)\n", plus+minus, plus, minus)}'
+}
 # Docker
 alias d='docker'
 alias fig='docker compose'
