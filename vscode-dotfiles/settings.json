@@ -59,5 +59,41 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "diffEditor.renderSideBySide": true
+  "diffEditor.renderSideBySide": true,
+  "workbench.editor.empty.hint": "hidden",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "github.copilot.advanced": {},
+  "terminal.integrated.tabStopWidth": 4,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "debug.console.fontSize": 13,
+  "explorer.confirmPasteNative": false,
+  "editor.formatOnPaste": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "prettier.printWidth": 120,
+  "java.saveActions.organizeImports": false,
+  "java.jdt.ls.java.home": "",
+  "vim.camelCaseMotion.enable": true,
+  "git.autofetch": true,
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4o",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petSize": "small",
+  "eslint.validate": [],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "parallels-desktop.extension.path": "/Users/s-ozawa/.parallels-desktop-vscode",
+  "parallels-desktop.git.path": "/usr/bin/git",
+  "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
+  "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
+  "chat.agent.enabled": true,
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "parallels-desktop.devops-service.path": "/Users/s-ozawa/.parallels-desktop-vscode/tools/prldevops",
+  "github.copilot.nextEditSuggestions.enabled": true
 }
