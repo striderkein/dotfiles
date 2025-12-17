@@ -62,7 +62,6 @@
   "diffEditor.renderSideBySide": true,
   "workbench.editor.empty.hint": "hidden",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "github.copilot.advanced": {},
   "terminal.integrated.tabStopWidth": 4,
   "editor.fontSize": 14,
   "terminal.integrated.fontSize": 14,
