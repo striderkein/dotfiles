@@ -4,8 +4,7 @@ alias ls='ls -la'
 alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
 # git
-alias chash='git rev-parse --short HEAD'
-# Git のコミット履歴からある期間のコミット行数を表示する関数
+## Git のコミット履歴からある期間のコミット行数を表示する関数
 git_stats() {
     local since_date="$1"
     local until_date="$2"
