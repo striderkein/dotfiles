@@ -84,16 +84,11 @@
   "vscode-pets.petSize": "small",
   "eslint.validate": [],
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "parallels-desktop.extension.path": "/Users/s-ozawa/.parallels-desktop-vscode",
-  "parallels-desktop.git.path": "/usr/bin/git",
-  "parallels-desktop.prlctl.path": "/usr/local/bin/prlctl",
-  "parallels-desktop.brew.path": "/opt/homebrew/bin/brew",
   "chat.agent.enabled": true,
   "remote.defaultExtensionsIfInstalledLocally": [
     "GitHub.copilot",
     "GitHub.copilot-chat",
     "GitHub.vscode-pull-request-github"
   ],
-  "parallels-desktop.devops-service.path": "/Users/s-ozawa/.parallels-desktop-vscode/tools/prldevops",
   "github.copilot.nextEditSuggestions.enabled": true
 }
