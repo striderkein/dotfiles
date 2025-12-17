@@ -24,11 +24,11 @@ alias dv='docker volume'
 alias dvipf='docker volume prune -f && docker image prune -a -f'
 dcnt_id() {
   # $1 is must be CONTAINER_NAME
-  docker ps -a | grep $1 | awk '{print $1}'
+  docker ps -a | grep "$1" | awk '{print $1}'
 }
 dimg_id() {
   # $1 is must be IMAGE_NAME
-  docker images | grep $1 | awk '{print $3}'
+  docker images | grep "$1" | awk '{print $3}'
 }
 
 # Google Drive
@@ -39,6 +39,6 @@ install_vsc_ext() {
   if [ $# = 0 ]; then
     echo argument 'extension-ID' required.
   else
-    code --install-extension $1
+    code --install-extension "$1"
   fi
 }
