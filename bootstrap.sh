@@ -57,10 +57,10 @@ install_dotfiles() {
   for dotfile in "$dir"/.??*
   do
     local filename=$(basename "$dotfile")
-    [[ "$filename" == ".git" ]] && continue
-    [[ "$filename" == ".profile" ]] && continue
-    [[ "$filename" == ".bashrc" ]] && continue
-    [[ "$filename" == ".zshrc" ]] && continue
+    [ "$filename" = ".git" ] && continue
+    [ "$filename" = ".profile" ] && continue
+    [ "$filename" = ".bashrc" ] && continue
+    [ "$filename" = ".zshrc" ] && continue
     create_homedir_symlink "$filename"
   done
 }
