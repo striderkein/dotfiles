@@ -73,7 +73,6 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   "prettier.printWidth": 120,
   "java.saveActions.organizeImports": false,
-  "java.jdt.ls.java.home": "",
   "vim.camelCaseMotion.enable": true,
   "git.autofetch": true,
   "gitlens.ai.experimental.provider": "openai",
