@@ -80,8 +80,6 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "vscode-pets.throwBallWithMouse": true,
   "vscode-pets.petSize": "small",
-  "eslint.validate": [],
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "chat.agent.enabled": true,
   "remote.defaultExtensionsIfInstalledLocally": [
     "GitHub.copilot",
