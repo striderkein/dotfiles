@@ -95,11 +95,6 @@
         "when": "github.copilot.activated && github.copilot.panelVisible"
     },
     {
-        "key": "ctrl+/",
-        "command": "-github.copilot.acceptCursorPanelSolution",
-        "when": "github.copilot.activated && github.copilot.panelVisible"
-    },
-    {
         "key": "alt+g",
         "command": "workbench.panel.chat.view.copilot.focus"
     },
