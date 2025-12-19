@@ -2,7 +2,7 @@
   "breadcrumbs.enabled": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": -3,
   "editor.minimap.enabled": false,
   "workbench.startupEditor": "newUntitledFile",
   "vscodeWorkspaceSwitcher.paths": [
@@ -11,8 +11,8 @@
   "files.autoSave": "off",
   "files.hotExit": "onExitAndWindowClose",
   "files.autoGuessEncoding": true,
-  "terminal.integrated.fontFamily": "'SFMono-Square', menlo, monospace",
-  "editor.fontFamily": "'SFMono-Square', Menlo, Monaco, 'Courier New', monospaceth",
+  "terminal.integrated.fontFamily": "'HackGen Console', 'SFMono-Square', menlo, monospace",
+  "editor.fontFamily": "'HackGen Console', 'SFMono-Square', Menlo, Monaco, 'Courier New', monospaceth",
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "all",
   "editor.renderControlCharacters": true,
@@ -59,5 +59,32 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "diffEditor.renderSideBySide": true
+  "diffEditor.renderSideBySide": true,
+  "workbench.editor.empty.hint": "hidden",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.tabStopWidth": 4,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "debug.console.fontSize": 13,
+  "explorer.confirmPasteNative": false,
+  "editor.formatOnPaste": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "prettier.printWidth": 120,
+  "java.saveActions.organizeImports": false,
+  "vim.camelCaseMotion.enable": true,
+  "git.autofetch": true,
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4o",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "vscode-pets.throwBallWithMouse": true,
+  "vscode-pets.petSize": "small",
+  "chat.agent.enabled": true,
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
+  "github.copilot.nextEditSuggestions.enabled": true
 }

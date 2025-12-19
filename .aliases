@@ -1,24 +1,33 @@
 alias cl='clear'
 alias ls='ls -la'
-alias fig='docker-compose'
 # node.js
 alias nodeps='ps -e | grep node | awk '\''{print $1}'\'''
 alias nodekill='kill -9 $1'
 # git
-alias chash='git rev-parse --short HEAD'
+## Git のコミット履歴からある期間のコミット行数を表示する関数
+git_stats() {
+    local since_date="$1"
+    local until_date="$2"
+    local author="${3:-shirow.ozawa}"  # 引数が渡されていなければデフォルト値を使用
+
+    git log --numstat --pretty="%H" --author="$author" --since="$since_date" --until="$until_date" --no-merges | \
+    awk 'NF==3 {plus+=$1; minus+=$2} END {printf("%d (+%d, -%d)\n", plus+minus, plus, minus)}'
+}
 # Docker
 alias d='docker'
+alias fig='docker compose'
 alias di='docker images'
 alias dc='docker container'
 alias dp='docker ps'
 alias dv='docker volume'
+alias dvipf='docker volume prune -f && docker image prune -a -f'
 dcnt_id() {
   # $1 is must be CONTAINER_NAME
-  docker ps -a | grep $1 | awk '{print $1}'
+  docker ps -a | grep "$1" | awk '{print $1}'
 }
 dimg_id() {
   # $1 is must be IMAGE_NAME
-  docker images | grep $1 | awk '{print $3}'
+  docker images | grep "$1" | awk '{print $3}'
 }
 
 # Google Drive
@@ -29,6 +38,6 @@ install_vsc_ext() {
   if [ $# = 0 ]; then
     echo argument 'extension-ID' required.
   else
-    code --install-extension $1
+    code --install-extension "$1"
   fi
 }

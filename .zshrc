@@ -48,4 +48,10 @@ PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
 alias arm="exec arch -arch arm64e /bin/zsh --login"
 alias x64="exec arch -arch x86_64 /bin/zsh --login"
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+# Architecture-aware asdf initialization
+ARCH=$(uname -m)
+if [[ $ARCH == "arm64" ]]; then
+    [ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+elif [[ $ARCH == "x86_64" ]]; then
+    [ -f /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+fi

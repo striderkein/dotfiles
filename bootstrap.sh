@@ -26,23 +26,23 @@ deploy_git_completion() {
 }
 
 create_homedir_symlink() {
-  local basepath=$dir/$1
-  if [ -z $basepath ]; then
+  local basepath="$dir/$1"
+  if [ -z "$basepath" ]; then
     return
   fi
 
   # 第２引数で出力ファイル名変更可能
-  local outname=$2
-  if [ -z $outname ]; then
-    local outname=$1
+  local outname="$2"
+  if [ -z "$outname" ]; then
+    local outname="$1"
   fi
 
-  local outpath=~/$outname
-  if [ -e $outpath ]; then
+  local outpath="$HOME/$outname"
+  if [ -e "$outpath" ]; then
     return
   fi
 
-  ln -sfnv $basepath $outpath
+  ln -sfnv "$basepath" "$outpath"
 }
 
 install_dotfiles() {
@@ -54,15 +54,22 @@ install_dotfiles() {
     create_homedir_symlink .zshrc
   fi
 
-  for dotfile in .??*
+  for dotfile in "$dir"/.??*
   do
-    [[ "$dotfile" == ".git" ]] && continue
-    [[ "$dotfile" == ".profile" ]] && continue
-    [[ "$dotfile" == ".bashrc" ]] && continue
-    [[ "$dotfile" == ".zshrc" ]] && continue
-    create_homedir_symlink $dotfile
+    local filename=$(basename "$dotfile")
+    [ "$filename" = ".git" ] && continue
+    [ "$filename" = ".profile" ] && continue
+    [ "$filename" = ".bashrc" ] && continue
+    [ "$filename" = ".zshrc" ] && continue
+    create_homedir_symlink "$filename"
   done
 }
+
+# enable `code` command
+# cat << EOF >> ~/.zprofile
+# # Add Visual Studio Code (code)
+# export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+# EOF
 
 install_dotfiles
 deploy_git_completion

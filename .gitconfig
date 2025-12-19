@@ -1,16 +1,16 @@
 [core]
-	excludesfile = /Users/shirow/.gitignore_global
-	quotepath = false
+  excludesfile = ~/.gitignore_global
+  quotepath = false
 [user]
-	name = shirow ozawa
-	email = striderkein@users.noreply.github.com
+  name = shirow ozawa
+  email = striderkein@users.noreply.github.com
 [alias]
   git = hub
   b  = branch
-	s = status -sb
-	co = checkout
-	cm = commit
-	cp = cherry-pick
+  s = status -sb
+  co = checkout
+  cm = commit
+  cp = cherry-pick
   ss = stash
   sp = stash pop
   sl = stash list
@@ -20,12 +20,9 @@
   # view aliases list
   al = config --get-regexp alias.*
   # various log
-  logg = log --graph --all --decorate --abbrev=7
-  log0 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
-  log1 = log --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset%C(black bold)%ar%Creset' --date=iso
-  log2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)― %an%C(reset)' --abbrev-commit
-  log3 = log --graph --date-order -C -M --pretty=format:"<%h> %ad [%an] %Cgreen%d%Creset %s" --all --date=short
-  log4 = log --graph --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(black bold)%an, %ar%Creset'
+  log1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)― %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+  log2 = log --pretty='format:%C(yellow)%h%Creset %C(magenta)%cd%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset%C(black bold)%ar%Creset' --date=iso
+  log3 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)― %an%C(reset)' --abbrev-commit
   # delete merged branch
   # usage: git delete-merged-branch <branch_name>
   # ex. usage: git delete-merged-branch develop
@@ -35,9 +32,9 @@
   cb = rev-parse --abbrev-ref HEAD
   push-f = push --force-with-lease
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 [color]
-	ui = auto
+  ui = auto
