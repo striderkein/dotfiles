@@ -1,19 +1,17 @@
 # dotfiles
 
-## for zsh | bash
+## How to Setup
 
-```sh
-git clone git@github.com:striderkein/dotfiles
-```
+1. clone at `$HOME`
 
-## for Cygwin
+   ```sh
+   cd
+   git clone git@github.com:striderkein/dotfiles
+   cd dotfiles
+   ```
 
-```sh
-git clone git@github.com:striderkein/dotfiles -b cygwin
-```
+2. install
 
-## install
-
-```sh
-./bootstrap.sh
-```
+   ```sh
+   ./bootstrap.sh
+   ```
