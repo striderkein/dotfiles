@@ -3,13 +3,15 @@ dir=$(cd $(dirname $0) && pwd)
 
 # detect bash | zsh
 is_bash() {
-  if [ -n "${BASH_VERSION-}" ]; then
-    # bash
-    true
-  else
-    # not bash
-    false
-  fi
+  # $SHELL 環境変数で判定（より確実）
+  case "$SHELL" in
+    */bash|*/bash.exe)
+      true
+      ;;
+    *)
+      false
+      ;;
+  esac
 }
 
 download_git_completion() {
