@@ -16,4 +16,3 @@ do
 done
 
 code --list-extensions > extensions
-
